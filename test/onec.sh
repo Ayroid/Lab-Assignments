@@ -1,10 +1,9 @@
 #!/bin/bash
-echo -n "Enter Size: "
-read size
+
 flag=1
-for(( i=0; i<size; i++ ));
+for(( i=0; i<3; i++ ));
 do
-	for(( j=size-i-1; j>0; j-- ));
+	for(( j=2-i; j>0; j-- ));
 	do
 		echo -n " "
 	done
@@ -16,13 +15,13 @@ do
 	echo ""
 done
 
-for(( i=0; i<size-1; i++));
+for(( i=0; i<2; i++));
 do
 	for(( j=0; j<=i; j++ ));
 	do
 		echo -n " "
 	done
-	for(( k=0; k<size-i-1; k++));
+	for(( k=0; k<2-i; k++));
 	do
 		echo -n $flag" "
 		((flag=flag+1))
