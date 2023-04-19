@@ -1,6 +1,7 @@
 #!/bin/bash
+
 flag=1
-for (( i=1; flag<=10 ; i++));
+for (( i=1; i<=4 ; i++));
 do
 	for (( j=1; j<=i; j++));
 	do
