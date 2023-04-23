@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Set the threshold for disk usage
+THRESHOLD=90
+
+# Get the disk usage as a percentage
+USAGE=$(df -h | grep "/mnt/c" | awk '{print $5}' | cut -d'%' -f1)
+
+# Check if disk usage is above the threshold
+if [ $USAGE -gt $THRESHOLD ]; then
+    # Send an alert
+    echo "Disk usage is above $THRESHOLD% on /dev/sda1" | mail -s "Disk Alert" ayroids@gmail.com
+fi
