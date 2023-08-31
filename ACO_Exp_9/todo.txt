@@ -1,0 +1,2 @@
+create a dockerfile to install nginx web server and a static web page in it. And this code
+will be pushed to Git
